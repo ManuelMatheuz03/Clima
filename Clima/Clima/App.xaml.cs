@@ -5,13 +5,14 @@ using Xamarin.Forms.Xaml;
 [assembly: XamlCompilation (XamlCompilationOptions.Compile)]
 namespace Clima
 {
+    using View;
 	public partial class App : Application
 	{
 		public App ()
 		{
 			InitializeComponent();
 
-			MainPage = new MainPage();
+			MainPage = new WeatherPage();
 		}
 
 		protected override void OnStart ()
