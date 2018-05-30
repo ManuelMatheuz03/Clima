@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Clima.View.WeatherPage"
+             xmlns:local="clr-namespace:Clima.ViewModel">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:WeatherViewModelPage x:Key="weatherViewModel"></local:WeatherViewModelPage>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <!--buscador-->
+                <RowDefinition></RowDefinition>
+                <!--formulario-->
+                <RowDefinition></RowDefinition>
+                <!--imagen-->
+            </Grid.RowDefinitions>
+            <!--buscador-->
+            <!--formulario-->
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <!--fila ubicacion-->
+                    <RowDefinition></RowDefinition>
+                    <!--fila pais-->
+                    <RowDefinition></RowDefinition>
+                    <!--fila region-->
+                    <RowDefinition></RowDefinition>
+                    <!--fila actualizacion-->
+                    <RowDefinition></RowDefinition>
+                    <!--fila temperatura-->
+                    <RowDefinition></RowDefinition>
+                    <!--fila clima-->
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <!--columna 1 del formulartio-->
+                    <ColumnDefinition></ColumnDefinition>
+                    <!--columna 2 del formulario-->
+                </Grid.ColumnDefinitions>
+
+                <!--label ubicacion-->
+                <Label Text="Ubicacion" 
+                       FontAttributes="Bold"/>
+                <!--ciudad-->
+                <Label Text="{Binding Ubicacion}"
+                       Grid.Row="1"
+                       ></Label>
+
+
+                <!--imagen-->
+                <Image Grid.Row="2"></Image>
+            </Grid>
+
+        </Grid>
+
+
+
+
+    </ContentPage.Content>
+
+</ContentPage>
