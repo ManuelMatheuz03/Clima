@@ -8,6 +8,7 @@
             <local:WeatherViewModelPage x:Key="weatherViewModel"></local:WeatherViewModelPage>
         </ResourceDictionary>
     </ContentPage.Resources>
+
     <ContentPage.Content>
         <Grid>
 
@@ -20,6 +21,10 @@
                 <!--imagen-->
             </Grid.RowDefinitions>
             <!--buscador-->
+            <SearchBar Placeholder="Ingrese ciudad"
+                       Text="{Binding ResultTerm}"
+                       SearchCommand="{Binding BuscarCommand}"
+                       ></SearchBar>
             <!--formulario-->
             <Grid Grid.Row="1">
                 <Grid.RowDefinitions>
@@ -48,19 +53,67 @@
                        FontAttributes="Bold"/>
                 <!--ciudad-->
                 <Label Text="{Binding Ubicacion}"
+                       Grid.Column="1"                      
+                       ></Label>
+                <!--label pais-->
+                <Label Text="Pais" 
+                       FontAttributes="Bold"
+                       Grid.Row="1"/>
+                <!--pais-->
+                <Label Text="{Binding Pais}"
+                       Grid.Column="1"
                        Grid.Row="1"
                        ></Label>
+                <!--label region-->
+                <Label Text="Region" 
+                       FontAttributes="Bold"
+                       Grid.Row="2"/>
+                <!--region-->
+                <Label Text="{Binding Region}"
+                       Grid.Column="1"
+                       Grid.Row="2"
+                       ></Label>
+                <!--label ultima Actualizacion-->
+                <Label Text="Ultima Actualizacion" 
+                       FontAttributes="Bold"
+                       Grid.Row="3"/>
+                <!--actulizacion-->
+                <Label Text="{Binding UltimaActualizacion}"
+                       Grid.Column="1"
+                       Grid.Row="3"
+                       ></Label>
+                <!--label temperatura-->
+                <Label Text="Temperatura" 
+                       FontAttributes="Bold"
+                       Grid.Row="4"/>
+                <!--temperatura-->
+                <Label Text="{Binding Temperatura}"
+                       Grid.Column="1"
+                       Grid.Row="4"
+                       ></Label>
+                <!--label Clima-->
+                <Label Text="Clima" 
+                       FontAttributes="Bold"
+                       Grid.Row="5"/>
+                <!--Clima-->
+                <Label Text="{Binding Clima}"
+                       Grid.Column="1"
+                       Grid.Row="5"
+                       ></Label>
 
-
-                <!--imagen-->
-                <Image Grid.Row="2"></Image>
             </Grid>
-
+            <!--imagen-->
+            <Image Grid.Row="2"
+                       HeightRequest="200"
+                       WidthRequest="200"
+                       Source="{Binding Image}"
+                       ></Image>
         </Grid>
 
 
 
 
     </ContentPage.Content>
+
 
 </ContentPage>
